@@ -95,4 +95,11 @@ grid.addEventListener("keydown", (e) => {
   openProduct(card.dataset.id);
 });
 
+<script src="shop.js"></script>
+
+<script>
+  // scroll code
+</script>
+
+</body>
 
