@@ -28,8 +28,7 @@ width:100%;
 z-index:100;
 opacity:0;
 transition:opacity 1.6s ease;
-background:rgba(255,255,255,.9);
-backdrop-filter:blur(10px);
+background:#ece9e3;
 border-bottom:1px solid var(--line);
 }
 
@@ -40,16 +39,23 @@ opacity:1;
 .header-inner{
 max-width:var(--max);
 margin:auto;
-padding:12px 20px;
+padding:6px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
-/* SMALL HEADER LOGO */
+/* HEADER LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+}
 
 .logo img{
-height:34px;
+height:72px;
+width:auto;
+display:block;
 }
 
 /* NAVIGATION */
@@ -86,7 +92,7 @@ white 100%
 }
 
 .banner img{
-width:120%;
+width:130%;
 max-width:2400px;
 }
 
