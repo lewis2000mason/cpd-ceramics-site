@@ -5,7 +5,7 @@ const products = [
     price: "£175",
     image: "images/product-01.jpg",
     description: "Wheel thrown  vase, exterior dolomite glaze - can house water and flowers.",
-    meta: [""],
+    meta: ["t"],
     buyLink: "https://example.com/your-payment-link-1",
     soldOut: false
   },
@@ -94,4 +94,5 @@ grid.addEventListener("keydown", (e) => {
   e.preventDefault();
   openProduct(card.dataset.id);
 });
+
 
