@@ -4,33 +4,20 @@ const products = [
     title: "Stoneware Mug — Satin White",
     price: "£28",
     image: "images/product-01.jpg",
-    short: "Wheel-thrown. Gloss interior, satin exterior.",
-    description:
-      "A wheel-thrown stoneware mug with a comfortable handle and soft profile. Glazed inside for daily use; satin finish outside for a clean, calm feel.",
+    description: "Wheel-thrown stoneware mug. Glazed interior, satin exterior.",
     meta: ["Approx. 320ml", "Food safe glaze", "Hand wash recommended"],
-    buyLink: "https://example.com/your-payment-link-1"
+    buyLink: "https://example.com/your-payment-link-1",
+    soldOut: false
   },
   {
     id: "p02",
     title: "Large Bowl — Speckled",
     price: "£45",
     image: "images/product-02.jpg",
-    short: "Speckled clay body with clear glaze.",
-    description:
-      "A generous serving bowl with a quiet speckle through the body. Designed for everyday use but finished with gallery-level photography and detail.",
+    description: "Generous serving bowl with a speckled body and clear glaze.",
     meta: ["Approx. Ø 22cm", "Food safe glaze", "One-off piece"],
-    buyLink: "https://example.com/your-payment-link-2"
-  },
-  {
-    id: "p03",
-    title: "Bud Vase — Blue Slip",
-    price: "£32",
-    image: "images/product-03.jpg",
-    short: "Slip detail with a soft gloss.",
-    description:
-      "Small bud vase with slip layers and subtle movement. Best with single stems; also works as an object on its own.",
-    meta: ["Approx. 14cm tall", "Watertight", "One-off piece"],
-    buyLink: "https://example.com/your-payment-link-3"
+    buyLink: "https://example.com/your-payment-link-2",
+    soldOut: true
   }
 ];
 
@@ -44,15 +31,21 @@ const modalDesc = document.getElementById("modalDesc");
 const modalMeta = document.getElementById("modalMeta");
 const modalBuy = document.getElementById("modalBuy");
 
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, s => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+  }[s]));
+}
+
 function renderGrid() {
   grid.innerHTML = products.map(p => `
     <article class="card" data-id="${p.id}" tabindex="0" role="button" aria-label="View ${escapeHtml(p.title)}">
-      <img src="${p.image}" alt="${escapeHtml(p.title)}">
-      <div class="card-body">
-        <div>
-          <h3 class="card-title">${escapeHtml(p.title)}</h3>
-          <p class="card-sub">${escapeHtml(p.short)}</p>
-        </div>
+      <div class="card-media">
+        ${p.soldOut ? `<div class="badge">Sold out</div>` : ``}
+        <img src="${p.image}" alt="${escapeHtml(p.title)}">
+      </div>
+      <div class="card-meta">
+        <h3 class="card-title">${escapeHtml(p.title)}</h3>
         <p class="price">${escapeHtml(p.price)}</p>
       </div>
     </article>
@@ -70,22 +63,20 @@ function openProduct(id) {
   modalDesc.textContent = p.description;
 
   modalMeta.innerHTML = (p.meta || []).map(m => `<li>${escapeHtml(m)}</li>`).join("");
-  modalBuy.href = p.buyLink || "#";
-  modalBuy.style.pointerEvents = p.buyLink ? "auto" : "none";
-  modalBuy.style.opacity = p.buyLink ? "1" : ".5";
 
-  if (typeof modal.showModal === "function") modal.showModal();
-  else alert("Your browser doesn’t support modal dialogs.");
-}
+  if (p.soldOut || !p.buyLink) {
+    modalBuy.textContent = "Unavailable";
+    modalBuy.href = "#";
+    modalBuy.style.pointerEvents = "none";
+    modalBuy.style.opacity = ".5";
+  } else {
+    modalBuy.textContent = "Buy";
+    modalBuy.href = p.buyLink;
+    modalBuy.style.pointerEvents = "auto";
+    modalBuy.style.opacity = "1";
+  }
 
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, s => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  }[s]));
+  modal.showModal();
 }
 
 renderGrid();
