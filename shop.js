@@ -1,20 +1,20 @@
 const products = [
   {
     id: "p01",
-    title: "Stoneware Mug — Satin White",
-    price: "£28",
+    title: "Large Landscape Slip Painted Vase",
+    price: "£175",
     image: "images/product-01.jpg",
-    description: "Wheel-thrown stoneware mug. Glazed interior, satin exterior.",
-    meta: ["Approx. 320ml", "Food safe glaze", "Hand wash recommended"],
+    description: "Wheel thrown  vase, exterior dolomite glaze - can house water and flowers.",
+    meta: [""],
     buyLink: "https://example.com/your-payment-link-1",
     soldOut: false
   },
   {
     id: "p02",
-    title: "Large Bowl — Speckled",
-    price: "£45",
+    title: "Large Terracotta/White stoneware mix Green Glaze interior Bowl",
+    price: "£95",
     image: "images/product-02.jpg",
-    description: "Generous serving bowl with a speckled body and clear glaze.",
+    description: "Generous decorative bowl, could house fruit nicely.",
     meta: ["Approx. Ø 22cm", "Food safe glaze", "One-off piece"],
     buyLink: "https://example.com/your-payment-link-2",
     soldOut: true
@@ -94,3 +94,4 @@ grid.addEventListener("keydown", (e) => {
   e.preventDefault();
   openProduct(card.dataset.id);
 });
+
