@@ -2,97 +2,106 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lewis Mason — Ceramics</title>
-  <meta name="description" content="Shop available ceramics." />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lewis Mason — Ceramics</title>
+<meta name="description" content="Shop available ceramics."/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
 
 <header class="header" id="topbar">
-  <div class="header-inner">
-    <nav class="nav">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+
+<div class="header-inner">
+
+<a class="logo" href="index.html">
+<img src="images/logo2.png" alt="Lew John Ceramics">
+</a>
+
+<nav class="nav">
+<a href="index.html" aria-current="page">Home</a>
+<a href="#shop">Shop</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</div>
+
 </header>
 
-<!-- FULLSCREEN BANNER -->
-<section class="banner" id="banner">
-  <div class="banner-inner">
-    <img src="images/logo.png" alt="Lew John Ceramics">
-  </div>
+<!-- BANNER -->
+
+<section class="banner">
+
+<img src="images/logo.png" alt="Lew John Ceramics">
+
 </section>
 
 <main>
 
-<section class="topline">
-  <h1>Available work</h1>
-  <p>Wheel-thrown ceramics · photographed individually</p>
+<section id="shop" class="topline">
+<h1>Available work</h1>
+<p>Wheel-thrown ceramics · photographed individually</p>
 </section>
 
 <section aria-label="Shop">
-  <div id="productGrid" class="grid" aria-live="polite"></div>
+
+<div id="productGrid" class="grid" aria-live="polite"></div>
+
 </section>
 
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <div>© <span id="year"></span> Lewis Mason</div>
 
-    <div>
-      <a href="contact.html">Contact</a>
-      &nbsp;·&nbsp;
-      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">
-        Instagram
-      </a>
-    </div>
-  </div>
+<div class="footer-inner">
+
+<div>© <span id="year"></span> Lewis Mason</div>
+
+<div>
+<a href="contact.html">Contact</a>
+&nbsp;·&nbsp;
+<a href="https://instagram.com/lew.j0hn" target="_blank" rel="noopener">
+Instagram
+</a>
+</div>
+
+</div>
+
 </footer>
 
-<!-- PRODUCT MODAL -->
+<!-- MODAL -->
 
 <dialog id="productModal" class="modal">
 
 <form method="dialog" class="modal-inner">
 
-<button class="modal-close" aria-label="Close">×</button>
+<button class="modal-close">×</button>
 
 <div class="modal-media">
-<img id="modalImg" alt="" />
+<img id="modalImg">
 </div>
 
 <div class="modal-content">
 
 <h3 id="modalTitle"></h3>
 
-<p id="modalPrice" class="muted" style="margin:0 0 10px;"></p>
+<p id="modalPrice" class="muted"></p>
 
-<p id="modalDesc" class="muted" style="margin:0;"></p>
+<p id="modalDesc" class="muted"></p>
 
 <ul id="modalMeta" class="meta"></ul>
 
 <div class="modal-actions">
-<a id="modalBuy" class="button" href="#" target="_blank" rel="noopener">Buy</a>
-
-<button class="button button-ghost" value="cancel">Close</button>
+<a id="modalBuy" class="button" href="#">Buy</a>
+<button class="button button-ghost">Close</button>
 </div>
-
-<p class="muted" style="font-size:12px; margin-top:12px;">
-For questions, use the contact page.
-</p>
 
 </div>
 
 </form>
 
 </dialog>
-
-<!-- JAVASCRIPT -->
 
 <script src="shop.js"></script>
 
