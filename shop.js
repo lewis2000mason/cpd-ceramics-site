@@ -1,105 +1,97 @@
 const products = [
-  {
-    id: "p01",
-    title: "Large Landscape Slip Painted Vase",
-    price: "£175",
-    image: "images/product-01.jpg",
-    description: "Wheel thrown  vase, exterior dolomite glaze - can house water and flowers.",
-    meta: ["t"],
-    buyLink: "https://example.com/your-payment-link-1",
-    soldOut: false
-  },
-  {
-    id: "p02",
-    title: "Large Terracotta/White stoneware mix Green Glaze interior Bowl",
-    price: "£95",
-    image: "images/product-02.jpg",
-    description: "Generous decorative bowl, could house fruit nicely.",
-    meta: ["Approx. Ø 22cm", "Food safe glaze", "One-off piece"],
-    buyLink: "https://example.com/your-payment-link-2",
-    soldOut: true
-  }
+
+{
+id:"p01",
+title:"Landscape Slip Painted Vase",
+price:"£175",
+image:"images/product-01.jpg",
+description:"Wheel thrown vase with dolomite glaze exterior.",
+meta:["Stoneware","Watertight","One-off piece"],
+soldOut:false
+},
+
+{
+id:"p02",
+title:"Green Interior Bowl",
+price:"£95",
+image:"images/product-02.jpg",
+description:"Large decorative fruit bowl.",
+meta:["Ø 22cm","Food safe glaze"],
+soldOut:true
+},
+
+{
+id:"p03",
+title:"Tall Stoneware Vase",
+price:"£140",
+image:"images/product-01.jpg",
+description:"Wheel thrown tall form.",
+meta:["Stoneware","One-off piece"],
+soldOut:false
+},
+
+{
+id:"p04",
+title:"Slip Decorated Vessel",
+price:"£120",
+image:"images/product-02.jpg",
+description:"Slip painted ceramic vessel.",
+meta:["Stoneware","Decorative"],
+soldOut:false
+}
+
 ];
 
 const grid = document.getElementById("productGrid");
-const modal = document.getElementById("productModal");
 
+const modal = document.getElementById("productModal");
 const modalImg = document.getElementById("modalImg");
 const modalTitle = document.getElementById("modalTitle");
 const modalPrice = document.getElementById("modalPrice");
 const modalDesc = document.getElementById("modalDesc");
 const modalMeta = document.getElementById("modalMeta");
-const modalBuy = document.getElementById("modalBuy");
 
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, s => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
-  }[s]));
+function renderProducts(){
+
+grid.innerHTML = products.map(p => `
+
+<div class="card" data-id="${p.id}">
+
+<div class="card-media">
+${p.soldOut ? `<div class="badge">Sold out</div>` : ``}
+<img src="${p.image}" alt="${p.title}">
+</div>
+
+<div class="card-meta">
+<h3 class="card-title">${p.title}</h3>
+<p class="price">${p.price}</p>
+</div>
+
+</div>
+
+`).join("");
+
 }
 
-function renderGrid() {
-  grid.innerHTML = products.map(p => `
-    <article class="card" data-id="${p.id}" tabindex="0" role="button" aria-label="View ${escapeHtml(p.title)}">
-      <div class="card-media">
-        ${p.soldOut ? `<div class="badge">Sold out</div>` : ``}
-        <img src="${p.image}" alt="${escapeHtml(p.title)}">
-      </div>
-      <div class="card-meta">
-        <h3 class="card-title">${escapeHtml(p.title)}</h3>
-        <p class="price">${escapeHtml(p.price)}</p>
-      </div>
-    </article>
-  `).join("");
-}
+renderProducts();
 
-function openProduct(id) {
-  const p = products.find(x => x.id === id);
-  if (!p) return;
+/* PRODUCT CLICK */
 
-  modalImg.src = p.image;
-  modalImg.alt = p.title;
-  modalTitle.textContent = p.title;
-  modalPrice.textContent = p.price;
-  modalDesc.textContent = p.description;
+grid.addEventListener("click", e => {
 
-  modalMeta.innerHTML = (p.meta || []).map(m => `<li>${escapeHtml(m)}</li>`).join("");
+const card = e.target.closest(".card");
+if(!card) return;
 
-  if (p.soldOut || !p.buyLink) {
-    modalBuy.textContent = "Unavailable";
-    modalBuy.href = "#";
-    modalBuy.style.pointerEvents = "none";
-    modalBuy.style.opacity = ".5";
-  } else {
-    modalBuy.textContent = "Buy";
-    modalBuy.href = p.buyLink;
-    modalBuy.style.pointerEvents = "auto";
-    modalBuy.style.opacity = "1";
-  }
+const id = card.dataset.id;
+const p = products.find(x => x.id === id);
 
-  modal.showModal();
-}
+modalImg.src = p.image;
+modalTitle.textContent = p.title;
+modalPrice.textContent = p.price;
+modalDesc.textContent = p.description;
 
-renderGrid();
+modalMeta.innerHTML = p.meta.map(m => `<li>${m}</li>`).join("");
 
-grid.addEventListener("click", (e) => {
-  const card = e.target.closest(".card");
-  if (!card) return;
-  openProduct(card.dataset.id);
+modal.showModal();
+
 });
-
-grid.addEventListener("keydown", (e) => {
-  if (e.key !== "Enter" && e.key !== " ") return;
-  const card = e.target.closest(".card");
-  if (!card) return;
-  e.preventDefault();
-  openProduct(card.dataset.id);
-});
-
-<script src="shop.js"></script>
-
-<script>
-  // scroll code
-</script>
-
-</body>
-
