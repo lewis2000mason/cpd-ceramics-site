@@ -3,61 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Ceramics</title>
-  <meta name="description" content="Studio ceramics — shop current work." />
+  <title>Lewis Mason — Ceramics</title>
+  <meta name="description" content="Shop available ceramics." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="header">
-    <a class="brand" href="index.html">Your Name</a>
-
-    <nav class="nav">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Home">Lewis Mason</a>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Studio Ceramics</h1>
-        <p class="lede">
-          Small-batch functional ware. Each piece is photographed carefully and listed individually.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#shop">Shop available work</a>
-          <a class="button button-ghost" href="contact.html">Contact</a>
-        </div>
-      </div>
+    <section class="topline">
+      <h1>Available work</h1>
+      <p>Wheel-thrown ceramics · photographed individually</p>
     </section>
 
-    <section class="section" id="shop">
-      <div class="section-head">
-        <h2>Available Work</h2>
-        <p class="muted">Click a piece to view details. “Buy” links can go to Stripe / Shopify / Etsy.</p>
-      </div>
-
+    <section aria-label="Shop">
       <div id="productGrid" class="grid" aria-live="polite"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>About</h2>
-        <p class="muted">
-          Keep this short. A line or two about your practice, materials, firing, and where you’re based.
-        </p>
-      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="muted">© <span id="year"></span> Your Name</p>
-    <p class="muted"><a href="contact.html">Contact</a></p>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Lewis Mason</div>
+      <div>
+        <a href="contact.html">Contact</a>
+        &nbsp;·&nbsp;
+        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Product quick view modal -->
   <dialog id="productModal" class="modal">
     <form method="dialog" class="modal-inner">
       <button class="modal-close" aria-label="Close">×</button>
@@ -68,8 +51,8 @@
 
       <div class="modal-content">
         <h3 id="modalTitle"></h3>
-        <p id="modalPrice" class="price"></p>
-        <p id="modalDesc" class="muted"></p>
+        <p id="modalPrice" class="muted" style="margin:0 0 10px;"></p>
+        <p id="modalDesc" class="muted" style="margin:0;"></p>
 
         <ul id="modalMeta" class="meta"></ul>
 
@@ -78,16 +61,14 @@
           <button class="button button-ghost" value="cancel">Close</button>
         </div>
 
-        <p class="tiny muted">
-          Shipping and returns info can live here if you want it, but keep it minimal.
+        <p class="muted" style="font-size:12px; margin-top:12px;">
+          For questions, use the contact page.
         </p>
       </div>
     </form>
   </dialog>
 
   <script src="shop.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
