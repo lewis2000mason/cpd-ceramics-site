@@ -344,4 +344,6 @@ justify-content:center;
 gap:10px;
 }
 
+.drop-header{
+display:none;
 }
