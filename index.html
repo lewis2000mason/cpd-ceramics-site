@@ -22,6 +22,7 @@
 <nav class="nav">
 <a href="#top">Home</a>
 <a href="#shop">Shop</a>
+<a href="archive.html">Archive</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -29,8 +30,6 @@
 
 </header>
 
-
-<!-- HERO -->
 
 <section id="top" class="banner">
 
@@ -43,7 +42,7 @@
 
 <section id="shop" class="topline">
 
-<h1 id="shopTitle">Available Work</h1>
+<h1>Available Work</h1>
 <p>Wheel-thrown ceramics · photographed individually</p>
 
 </section>
@@ -51,33 +50,23 @@
 
 <section aria-label="Shop">
 
-<!-- NEXT DROP MESSAGE -->
-
 <div id="comingSoon" class="coming-soon">
 
 <h2>Next Drop Coming Soon</h2>
 
-<p id="dropText"></p>
-
 <p>
-Follow 
-<a href="https://instagram.com/lew.j0hn" target="_blank">
-@lew.j0hn
-</a>
-for updates.
+Follow
+<a href="https://instagram.com/lew.j0hn" target="_blank">@lew.j0hn</a>
+for drop announcements.
 </p>
 
 </div>
 
 
-<!-- PRODUCT GRID -->
-
 <div id="productGrid" class="grid" aria-live="polite"></div>
 
 </section>
 
-
-<!-- CONTACT SECTION -->
 
 <section id="contact" class="contact">
 
@@ -115,40 +104,6 @@ Instagram
 </div>
 
 </footer>
-
-
-<!-- PRODUCT MODAL -->
-
-<dialog id="productModal" class="modal">
-
-<form method="dialog" class="modal-inner">
-
-<button class="modal-close">×</button>
-
-<div class="modal-media">
-<img id="modalImg">
-</div>
-
-<div class="modal-content">
-
-<h3 id="modalTitle"></h3>
-
-<p id="modalPrice" class="muted"></p>
-
-<p id="modalDesc" class="muted"></p>
-
-<ul id="modalMeta" class="meta"></ul>
-
-<div class="modal-actions">
-<a id="modalBuy" class="button" href="#">Buy</a>
-<button class="button button-ghost">Close</button>
-</div>
-
-</div>
-
-</form>
-
-</dialog>
 
 
 <script src="shop.js"></script>
