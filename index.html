@@ -30,13 +30,37 @@
 
 </header>
 
+
 <section id="top" class="banner">
 <img src="images/logo.png" alt="Lew John Ceramics">
 </section>
 
+
 <main>
 
-<section id="shop" class="topline drop-header">
+<section id="shop" class="topline">
+
+<h1>Shop</h1>
+
+</section>
+
+
+<section aria-label="Shop">
+
+<div id="comingSoon" class="coming-soon">
+
+<h2>Next Drop Coming Soon</h2>
+
+<p>
+Follow
+<a href="https://instagram.com/lew.j0hn" target="_blank">@lew.j0hn</a>
+for drop announcements.
+</p>
+
+</div>
+
+
+<section id="dropHeader" class="drop-header">
 
 <h1>Drop 01</h1>
 
@@ -50,23 +74,11 @@ Wheel-thrown stoneware exploring texture, slip transfers and surface rhythm.
 
 </section>
 
-<section aria-label="Shop">
-
-<div id="comingSoon" class="coming-soon">
-
-<h2>Next Drop Coming Soon</h2>
-
-<p>
-Follow
-<a href="https://instagram.com/lew.j0hn" target="_blank" rel="noopener">@lew.j0hn</a>
-for drop announcements.
-</p>
-
-</div>
 
 <div id="productGrid" class="grid" aria-live="polite"></div>
 
 </section>
+
 
 <section id="contact" class="contact">
 
@@ -80,7 +92,7 @@ For commissions, enquiries, or purchasing work please get in touch.
 
 <a href="mailto:lewis2000mason@gmail.com">Email</a>
 
-<a href="https://instagram.com/lew.j0hn" target="_blank" rel="noopener">
+<a href="https://instagram.com/lew.j0hn" target="_blank">
 Instagram
 </a>
 
@@ -89,6 +101,7 @@ Instagram
 </section>
 
 </main>
+
 
 <footer class="footer">
 
@@ -104,15 +117,18 @@ Instagram
 
 </footer>
 
+
 <script src="shop.js"></script>
 <script src="shop-control.js"></script>
 
 <script>
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 window.addEventListener("load", () => {
 document.body.classList.add("loaded");
 });
+
 </script>
 
 </body>
