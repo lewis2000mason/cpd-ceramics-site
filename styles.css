@@ -261,3 +261,21 @@ grid-template-columns:1fr;
 }
 
 }
+.coming-soon{
+
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.coming-soon h2{
+
+font-size:2rem;
+margin-bottom:10px;
+
+}
