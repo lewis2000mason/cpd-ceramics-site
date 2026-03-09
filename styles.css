@@ -338,3 +338,29 @@ text-decoration:none;
 border-bottom:1px solid var(--text);
 
 }
+
+/* SOLD ITEMS */
+
+.card{
+position:relative;
+}
+
+.card.sold{
+opacity:.45;
+}
+
+.card.sold::after{
+
+content:"SOLD";
+
+position:absolute;
+top:10px;
+left:10px;
+
+background:black;
+color:white;
+
+padding:4px 8px;
+font-size:12px;
+
+}
