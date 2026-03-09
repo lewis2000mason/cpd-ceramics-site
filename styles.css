@@ -279,3 +279,23 @@ font-size:2rem;
 margin-bottom:10px;
 
 }
+
+.coming-soon{
+
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px;
+max-width:500px;
+margin:auto;
+
+}
+
+.coming-soon a{
+border-bottom:1px solid var(--text);
+text-decoration:none;
+}
