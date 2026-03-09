@@ -2,8 +2,8 @@
 // CERAMICS DROP CONTROL
 // =================================
 
-// false = shop closed
 // true = shop open
+// false = shop closed
 
 const SHOP_OPEN = false;
 
