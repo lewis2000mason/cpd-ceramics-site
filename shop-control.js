@@ -1,19 +1,28 @@
-// SHOP CONTROL
-// Change this to true or false depending on whether the shop is open
+// =========================
+// CERAMICS SHOP DROP TOGGLE
+// =========================
 
-const shopOpen = false;
+const SHOP_OPEN = false;
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const shopSection = document.getElementById("shop-items");
-    const comingSoon = document.getElementById("shop-coming-soon");
+const grid = document.getElementById("productGrid");
+const comingSoon = document.getElementById("comingSoon");
 
-    if (shopOpen) {
-        shopSection.style.display = "grid";
-        comingSoon.style.display = "none";
-    } else {
-        shopSection.style.display = "none";
-        comingSoon.style.display = "flex";
-    }
+if (!grid || !comingSoon) return;
+
+if (SHOP_OPEN) {
+
+grid.style.display = "grid";
+comingSoon.style.display = "none";
+
+}
+
+else {
+
+grid.style.display = "none";
+comingSoon.style.display = "flex";
+
+}
 
 });
