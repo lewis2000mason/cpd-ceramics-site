@@ -4,17 +4,20 @@ const products = [
 title: "Stoneware Bowl",
 price: "£45",
 image: "images/bowl1.jpg",
-description: "Wheel-thrown stoneware bowl."
+description: "Wheel-thrown stoneware bowl.",
+sold:false
 },
 
 {
 title: "Thrown Vase",
 price: "£65",
 image: "images/vase1.jpg",
-description: "Wheel-thrown vase."
+description: "Wheel-thrown vase.",
+sold:false
 }
 
 ];
+
 
 const grid = document.getElementById("productGrid");
 
@@ -24,6 +27,10 @@ products.forEach(product => {
 
 const card = document.createElement("div");
 card.className = "card";
+
+if(product.sold){
+card.classList.add("sold");
+}
 
 card.innerHTML = `
 
