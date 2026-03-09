@@ -18,7 +18,6 @@ sold:false
 
 ];
 
-
 const grid = document.getElementById("productGrid");
 
 if(grid){
