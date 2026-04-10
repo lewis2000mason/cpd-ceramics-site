@@ -347,3 +347,27 @@ gap:10px;
 .drop-header{
 display:none;
 }
+/* ABOUT PAGE */
+
+.about-text{
+max-width:700px;
+margin:40px auto;
+line-height:1.6;
+font-size:15px;
+color:var(--text);
+}
+
+.about-text p{
+margin-bottom:18px;
+}
+
+.workshop{
+text-align:center;
+margin-top:60px;
+padding-top:30px;
+border-top:1px solid var(--line);
+}
+
+.workshop h2{
+margin-bottom:10px;
+}
