@@ -62,22 +62,47 @@ font-size:14px;
 color:var(--text);
 }
 
+/* HERO / BANNER */
+
 .banner{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:linear-gradient(
+background:
+linear-gradient(
 to bottom,
 #ece9e3 0%,
-#ece9e3 68%,
-white 100%
+#ece9e3 48%,
+#efebe5 66%,
+#f6f4f1 84%,
+#ffffff 100%
 );
+overflow:hidden;
+position:relative;
+}
+
+.banner::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:220px;
+background:linear-gradient(
+to bottom,
+rgba(255,255,255,0),
+rgba(255,255,255,.95)
+);
+pointer-events:none;
 }
 
 .banner img{
-width:112%;
-max-width:2000px;
+width:102%;
+max-width:1850px;
+opacity:.98;
+filter:contrast(.96);
+transform:translateY(-28px);
 }
 
 .archive-banner{
@@ -85,8 +110,9 @@ height:55vh;
 }
 
 .archive-banner img{
-width:95%;
-max-width:1500px;
+width:90%;
+max-width:1450px;
+transform:translateY(-10px);
 }
 
 main{
@@ -452,11 +478,12 @@ font-size:13px;
 }
 
 .banner img{
-width:130%;
+width:126%;
+transform:translateY(-18px);
 }
 
 .archive-banner img{
-width:115%;
+width:110%;
 }
 
 .modal-inner{
