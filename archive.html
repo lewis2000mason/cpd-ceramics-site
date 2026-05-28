@@ -5,14 +5,13 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Archive — Lewis Mason Ceramics</title>
-<meta name="description" content="Previous ceramic drops and releases."/>
+<meta name="description" content="Previous ceramic work and sold archive."/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
 
 <header class="header" id="topbar">
-
 <div class="header-inner">
 
 <a class="logo" href="index.html#top">
@@ -22,76 +21,103 @@
 <nav class="nav">
 <a href="index.html#top">Home</a>
 <a href="index.html#shop">Shop</a>
+<a href="about.html">About</a>
 <a href="archive.html">Archive</a>
 <a href="index.html#contact">Contact</a>
 </nav>
 
 </div>
-
 </header>
 
-
-<section class="banner">
-
+<section class="banner archive-banner">
 <img src="images/logo.png" alt="Lew John Ceramics">
-
 </section>
-
 
 <main>
 
-<section class="topline">
-
-<h1>Drop Archive</h1>
-
-<p>
-Previous ceramic releases and collections
-</p>
-
+<section class="topline archive-title">
+<h1>Archive</h1>
+<p>Previous work and sold releases</p>
 </section>
 
+<section class="archive-tabs">
 
-<section class="grid archive-grid">
+<input type="radio" id="tabPrevious" name="archiveTabs" checked>
+<input type="radio" id="tabSold" name="archiveTabs">
 
-<div class="archive-item">
+<div class="tab-labels">
+<label for="tabPrevious">Previous Work</label>
+<label for="tabSold">Sold Archive</label>
+</div>
 
-<h3>No drops yet</h3>
+<div class="tab-panel previous-panel">
 
-<p class="muted">
-Future releases will appear here once the first drop has passed.
+<div class="archive-intro">
+<h2>Previous Work</h2>
+<p>
+Selected pieces from earlier making, tests, exhibitions and forms I want to keep visible as part of my practice.
 </p>
+</div>
+
+<div class="grid archive-grid">
+
+<div class="archive-card">
+<div class="archive-image placeholder-image"></div>
+<h3>Previous Vessel</h3>
+<p class="muted">Add image, date and details here.</p>
+</div>
+
+<div class="archive-card">
+<div class="archive-image placeholder-image"></div>
+<h3>Earlier Bowl Form</h3>
+<p class="muted">A space for work made before the current drop system.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="tab-panel sold-panel">
+
+<div class="archive-intro">
+<h2>Sold Archive</h2>
+<p>
+Sold work from future drops will appear here once releases have taken place.
+</p>
+</div>
+
+<div class="grid archive-grid">
+
+<div class="archive-card">
+<h3>No sold drops yet</h3>
+<p class="muted">
+This section will activate properly after the first shop drop.
+</p>
+</div>
+
+</div>
 
 </div>
 
 </section>
-
 
 </main>
 
-
 <footer class="footer">
-
 <div class="footer-inner">
 
 <div>© <span id="year"></span> Lewis Mason</div>
-
-<div>
-<a href="index.html#top">Back to top</a>
-</div>
+<div><a href="index.html#top">Back to top</a></div>
 
 </div>
-
 </footer>
 
-
 <script>
-
 document.getElementById("year").textContent = new Date().getFullYear();
 
 window.addEventListener("load", () => {
 document.body.classList.add("loaded");
 });
-
 </script>
 
 </body>
