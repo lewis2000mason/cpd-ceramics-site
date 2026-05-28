@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Commissions — Lewis Mason Ceramics</title>
+<meta name="description" content="Custom ceramic commissions by Lewis Mason."/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+<header class="header" id="topbar">
+<div class="header-inner">
+
+<a class="logo" href="index.html#top">
+<img src="images/logo2.png" alt="Lew John Ceramics">
+</a>
+
+<nav class="nav">
+<a href="index.html#top">Home</a>
+<a href="index.html#shop">Shop</a>
+<a href="about.html">About</a>
+<a href="commissions.html">Commissions</a>
+<a href="archive.html">Archive</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="banner archive-banner">
+<img src="images/logo.png" alt="Lew John Ceramics">
+</section>
+
+<main>
+
+<section class="topline">
+<h1>Custom Commissions</h1>
+<p>Bowls, vases and one-off ceramic pieces made to enquiry.</p>
+</section>
+
+<section class="commission-intro">
+
+<p>
+If you are interested in a custom ceramic piece, use the form below to outline what you are looking for. You can include the type of object, size, colours, surface ideas, budget and any links to work that has inspired the enquiry.
+</p>
+
+<p>
+Once submitted, this will open your email app with the details prepared to send directly to me.
+</p>
+
+</section>
+
+<section class="commission-form-wrap">
+
+<form class="commission-form" onsubmit="sendCommissionEmail(event)">
+
+<label>
+Your name
+<input type="text" id="name" required>
+</label>
+
+<label>
+Your email
+<input type="email" id="email" required>
+</label>
+
+<label>
+Type of piece
+<select id="pieceType" required>
+<option value="">Select an option</option>
+<option value="Bowl">Bowl</option>
+<option value="Vase">Vase</option>
+<option value="Large vessel">Large vessel</option>
+<option value="Custom piece">Custom piece</option>
+<option value="Workshop / lesson enquiry">Workshop / lesson enquiry</option>
+<option value="Other">Other</option>
+</select>
+</label>
+
+<label>
+Approximate size
+<input type="text" id="size" placeholder="Example: medium bowl, large vase, table centrepiece">
+</label>
+
+<label>
+Preferred colours / surface ideas
+<input type="text" id="colours" placeholder="Example: blue glaze, textured surface, lyric marks">
+</label>
+
+<label>
+Budget range
+<input type="text" id="budget" placeholder="Example: £50–£150">
+</label>
+
+<label>
+Ideal deadline
+<input type="text" id="deadline" placeholder="Example: no rush / needed by July">
+</label>
+
+<label>
+Inspiration links
+<textarea id="links" rows="4" placeholder="Paste links to work, images, Instagram posts or references here"></textarea>
+</label>
+
+<label>
+Additional notes
+<textarea id="notes" rows="6" placeholder="Tell me more about what you are imagining"></textarea>
+</label>
+
+<button class="button" type="submit">Prepare Email</button>
+
+</form>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="footer-inner">
+
+<div>© <span id="year"></span> Lewis Mason</div>
+<div><a href="index.html#top">Back to top</a></div>
+
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+window.addEventListener("load", () => {
+document.body.classList.add("loaded");
+});
+
+function sendCommissionEmail(event){
+event.preventDefault();
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const pieceType = document.getElementById("pieceType").value;
+const size = document.getElementById("size").value;
+const colours = document.getElementById("colours").value;
+const budget = document.getElementById("budget").value;
+const deadline = document.getElementById("deadline").value;
+const links = document.getElementById("links").value;
+const notes = document.getElementById("notes").value;
+
+const subject = encodeURIComponent("Custom Ceramic Commission Enquiry");
+
+const body = encodeURIComponent(
+`Name: ${name}
+
+Email: ${email}
+
+Type of piece: ${pieceType}
+
+Approximate size:
+${size}
+
+Preferred colours / surface ideas:
+${colours}
+
+Budget range:
+${budget}
+
+Ideal deadline:
+${deadline}
+
+Inspiration links:
+${links}
+
+Additional notes:
+${notes}`
+);
+
+window.location.href = `mailto:lewis2000mason@gmail.com?subject=${subject}&body=${body}`;
+}
+</script>
+
+</body>
+</html>
