@@ -12,7 +12,6 @@
 <body>
 
 <header class="header" id="topbar">
-
 <div class="header-inner">
 
 <a class="logo" href="#top">
@@ -28,7 +27,6 @@
 </nav>
 
 </div>
-
 </header>
 
 <section id="top" class="banner">
@@ -44,34 +42,28 @@
 <section aria-label="Shop">
 
 <div id="comingSoon" class="coming-soon">
-
 <h2>Next Drop Coming Soon</h2>
 
 <p>
 Follow
-<a href="https://instagram.com/lew.j0hn" target="_blank">@lew.j0hn</a>
+<a href="https://instagram.com/lew.j0hn" target="_blank" rel="noopener">@lew.j0hn</a>
 for drop announcements.
 </p>
-
 </div>
 
 <section id="dropHeader" class="drop-header">
-
 <h1>Drop 01</h1>
 
-<p class="drop-date">
-Spring 2026
-</p>
+<p class="drop-date">Spring 2026</p>
 
 <p class="drop-desc">
 Wheel-thrown stoneware exploring texture, slip transfers and surface rhythm.
 </p>
 
 <p id="pieceCount" class="piece-count"></p>
-
 </section>
 
-<div id="productGrid" class="grid"></div>
+<div id="productGrid" class="grid" aria-live="polite"></div>
 
 </section>
 
@@ -83,7 +75,7 @@ Wheel-thrown stoneware exploring texture, slip transfers and surface rhythm.
 
 <div class="contact-links">
 <a href="mailto:lewis2000mason@gmail.com">Email</a>
-<a href="https://instagram.com/lew.j0hn" target="_blank">Instagram</a>
+<a href="https://instagram.com/lew.j0hn" target="_blank" rel="noopener">Instagram</a>
 </div>
 
 </section>
@@ -91,12 +83,12 @@ Wheel-thrown stoneware exploring texture, slip transfers and surface rhythm.
 </main>
 
 <footer class="footer">
-
 <div class="footer-inner">
+
 <div>© <span id="year"></span> Lewis Mason</div>
 <div><a href="#top">Back to top</a></div>
-</div>
 
+</div>
 </footer>
 
 <script src="shop.js"></script>
@@ -104,6 +96,7 @@ Wheel-thrown stoneware exploring texture, slip transfers and surface rhythm.
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
 window.addEventListener("load", () => {
 document.body.classList.add("loaded");
 });
