@@ -768,13 +768,21 @@ align-items:center;
 /* ABOUT IMAGES */
 
 .about-image{
-max-width:900px;
-margin:40px auto;
+max-width:700px;
+margin:50px auto;
+display:flex;
+justify-content:center;
 }
 
 .about-image img{
 width:100%;
+max-width:700px;
+
 display:block;
-border-radius:var(--radius);
-border:1px solid var(--line);
+
+border-radius:12px;
+
+border:none;
+
+box-shadow:none;
 }
