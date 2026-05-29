@@ -802,3 +802,43 @@ align-items:center;
 }
 
 }
+/* EXHIBITION ARCHIVE PAGES */
+
+.archive-link{
+text-decoration:none;
+color:inherit;
+display:block;
+transition:transform .2s ease, opacity .2s ease;
+}
+
+.archive-link:hover{
+transform:translateY(-3px);
+opacity:.9;
+}
+
+.exhibition-page-text{
+max-width:680px;
+margin:35px auto;
+text-align:center;
+line-height:1.6;
+color:var(--muted);
+}
+
+.exhibition-gallery{
+max-width:950px;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.exhibition-gallery img{
+width:100%;
+display:block;
+border-radius:var(--radius);
+}
+
+.archive-back{
+text-align:center;
+margin:40px auto 20px;
+}
