@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -12,6 +13,7 @@
 <body>
 
 <header class="header" id="topbar">
+
 <div class="header-inner">
 
 <a class="logo" href="index.html#top">
@@ -28,6 +30,7 @@
 </nav>
 
 </div>
+
 </header>
 
 <section class="banner archive-banner">
@@ -37,8 +40,13 @@
 <main>
 
 <section class="topline archive-title">
+
 <h1>Archive</h1>
-<p>Previous exhibitions, work and sold releases</p>
+
+<p>
+Exhibition history, previous work and sold releases.
+</p>
+
 </section>
 
 <section class="archive-tabs">
@@ -47,51 +55,79 @@
 <input type="radio" id="tabSold" name="archiveTabs">
 
 <div class="tab-labels">
-<label for="tabPrevious">Previous Work</label>
-<label for="tabSold">Sold Archive</label>
+
+<label for="tabPrevious">Exhibition History</label> <label for="tabSold">Sold Archive</label>
+
 </div>
 
 <div class="tab-panel previous-panel">
 
 <div class="archive-intro">
-<h2>Previous Exhibitions</h2>
+
+<h2>Exhibition History</h2>
+
 <p>
-A record of previous exhibitions, gallery displays and selected work.
+A record of exhibitions, gallery displays and selected bodies of work.
 </p>
+
 </div>
 
 <div class="grid archive-grid">
 
-<a class="archive-card archive-link" href="zillah-bell-2025.html">
-<div class="archive-image">
-<img src="images/gallery251.jpg" alt="Zillah Bell Gallery 2025 showcase">
-</div>
-<h3>Zillah Bell Gallery — 2025 Showcase</h3>
-<p class="muted">Selected work shown at Zillah Bell Gallery, Thirsk.</p>
-</a>
-
-<a class="archive-card archive-link" href="zillah-bell-2026.html">
-<div class="archive-image">
-<img src="images/gallery261.jpg" alt="Zillah Bell Gallery 2026 exhibition">
-</div>
-<h3>Zillah Bell Gallery — 2026</h3>
-<p class="muted">A later body of work shown at Zillah Bell Gallery, Thirsk.</p>
-</a>
-
 <a class="archive-card archive-link" href="access-show-2022.html">
+
 <div class="archive-image">
-<img src="images/accessshow2.JPG" alt="Access Show July 2022">
+<img src="images/accessshow1.JPG" alt="Access Show July 2022">
 </div>
+
 <h3>Access Show — July 2022</h3>
-<p class="muted">Selected work from the Access Show in July 2022.</p>
+
+<p class="muted">
+Selected work from the Access Show in July 2022.
+</p>
+
 </a>
 
 <a class="archive-card archive-link" href="make-things-happen.html">
+
 <div class="archive-image">
-<img src="images/mth5.jpg" alt="Make Things Happen exhibition">
+<img src="images/mth5.jpg" alt="Make Things Happen">
 </div>
-<h3>Make Things Happen 2025</h3>
-<p class="muted">Final Sculpture for the end of module show "Make Things Happen" A collaborative collection of work in permanant residence at York College.</p>
+
+<h3>Make Things Happen</h3>
+
+<p class="muted">
+Selected work from the Make Things Happen exhibition.
+</p>
+
+</a>
+
+<a class="archive-card archive-link" href="zillah-bell-2025.html">
+
+<div class="archive-image">
+<img src="images/gallery251.jpg" alt="Zillah Bell Gallery 2025 Showcase">
+</div>
+
+<h3>Zillah Bell Gallery — 2025 Showcase</h3>
+
+<p class="muted">
+Selected work shown at Zillah Bell Gallery, Thirsk.
+</p>
+
+</a>
+
+<a class="archive-card archive-link" href="zillah-bell-2026.html">
+
+<div class="archive-image">
+<img src="images/gallery261.jpg" alt="Zillah Bell Gallery 2026">
+</div>
+
+<h3>Zillah Bell Gallery — 2026</h3>
+
+<p class="muted">
+A later body of work shown at Zillah Bell Gallery, Thirsk.
+</p>
+
 </a>
 
 </div>
@@ -101,19 +137,25 @@ A record of previous exhibitions, gallery displays and selected work.
 <div class="tab-panel sold-panel">
 
 <div class="archive-intro">
+
 <h2>Sold Archive</h2>
+
 <p>
 Sold work from future drops will appear here once releases have taken place.
 </p>
+
 </div>
 
 <div class="grid archive-grid">
 
 <div class="archive-card">
+
 <h3>No sold drops yet</h3>
+
 <p class="muted">
-This section will activate properly after the first shop drop.
+This section will activate after the first shop drop.
 </p>
+
 </div>
 
 </div>
@@ -125,20 +167,28 @@ This section will activate properly after the first shop drop.
 </main>
 
 <footer class="footer">
+
 <div class="footer-inner">
 
 <div>© <span id="year"></span> Lewis Mason</div>
-<div><a href="index.html#top">Back to top</a></div>
+
+<div>
+<a href="index.html#top">Back to top</a>
+</div>
 
 </div>
+
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
 window.addEventListener("load", () => {
 document.body.classList.add("loaded");
 });
+
 </script>
 
 </body>
