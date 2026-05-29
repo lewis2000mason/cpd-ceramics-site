@@ -768,7 +768,7 @@ align-items:center;
 /* ABOUT IMAGES */
 
 .about-image{
-max-width:700px;
+max-width:550px;
 margin:50px auto;
 display:flex;
 justify-content:center;
@@ -776,13 +776,9 @@ justify-content:center;
 
 .about-image img{
 width:100%;
-max-width:700px;
-
+max-width:650px;
 display:block;
-
-border-radius:12px;
-
 border:none;
-
 box-shadow:none;
+border-radius:12px;
 }
