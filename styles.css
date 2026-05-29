@@ -128,7 +128,7 @@ transparent 100%
 );
 }
 
-/* ARCHIVE BANNER */
+/* ARCHIVE / INNER PAGE BANNER */
 
 .archive-banner{
 height:55vh;
@@ -619,6 +619,32 @@ font-size:20px;
 
 /* ABOUT */
 
+.about-gallery{
+max-width:900px;
+margin:50px auto 35px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+
+align-items:start;
+}
+
+.about-gallery img{
+width:100%;
+max-width:420px;
+
+margin:auto;
+
+display:block;
+
+border:none !important;
+outline:none !important;
+box-shadow:none !important;
+
+border-radius:12px;
+}
+
 .about-text{
 max-width:700px;
 margin:40px auto;
@@ -750,6 +776,17 @@ text-align:center;
 height:260px;
 }
 
+.about-gallery{
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin:35px auto 25px;
+}
+
+.about-gallery img{
+max-width:100%;
+border-radius:10px;
+}
+
 .modal-inner{
 grid-template-columns:1fr;
 }
@@ -764,21 +801,4 @@ flex-direction:column;
 align-items:center;
 }
 
-}
-/* ABOUT IMAGES */
-
-.about-image{
-max-width:550px;
-margin:50px auto;
-display:flex;
-justify-content:center;
-}
-
-.about-image img{
-width:100%;
-max-width:650px;
-display:block;
-border:none;
-box-shadow:none;
-border-radius:12px;
 }
